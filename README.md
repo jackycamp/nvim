@@ -1,5 +1,3 @@
-# 💤 LazyVim
-
 # My neovim config
 
 Uses [LazyVim](https://github.com/LazyVim/LazyVim) under the hood.
