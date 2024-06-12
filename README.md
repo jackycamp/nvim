@@ -1,3 +1,6 @@
+
+https://github.com/jackycamp/nvim/assets/26155547/cb86d8a0-4c11-448c-a02a-53526d1d5b58
+
 # My neovim config
 
 Neovim [LazyVim](https://github.com/LazyVim/LazyVim) for editing // [Kitty](https://sw.kovidgoyal.net/kitty/quickstart/) for the terminal.
