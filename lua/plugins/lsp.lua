@@ -8,15 +8,30 @@ return {
       pyright = {
         typeCheckingMode = "basic",
       },
+      tsserver = {
+        settings = {
+          typescript = {
+            -- inlayHints = {
+            --   functionLikeReturnTypes = false,
+            --   parameterNames = "none",
+            -- },
+          },
+          javascript = {
+            -- inlayHints = {
+            --   parameterNames = "none",
+            -- },
+          },
+        },
+      },
       rust_analyzer = {
         settings = {
           ["rust-analyzer"] = {
             rustfmt = {
-              extraArgs = { "--max-width", "140" },
+              extraArgs = { "--max-width", "140", "--chain-width", "100" },
             },
-            --hints = {
-            --  enable = false,
-            -- },
+            hints = {
+              enable = false,
+            },
             inlayHints = {
               --allFeatures = false,
               parameterHints = {
