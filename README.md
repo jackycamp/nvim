@@ -1,4 +1,3 @@
-
 https://github.com/jackycamp/nvim/assets/26155547/cb86d8a0-4c11-448c-a02a-53526d1d5b58
 
 # My neovim config
@@ -20,18 +19,15 @@ tar xzf nvim-macos.tar.gz
 ./nvim-macos/bin/nvim -h
 ```
 
-## nvim installation
+## nvim config installation
 
 ```bash
-# the .config dir should already exist
-cd ~/.config
-# clone this repo
-git clone https://github.com/jackycamp/nvim.git
+# as easy as:
+git clone https://github.com/jackycamp/nvim.git ~/.config/nvim
 
-# now you should have the directory ~/.config/nvim/
 ```
 
-## kitty installation
+## kitty config installation
 
 Installing kitty is pretty straight-forward. Just follow the [instructions](https://sw.kovidgoyal.net/kitty/binary/#install-kitty).
 
