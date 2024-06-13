@@ -6,6 +6,8 @@ Neovim [LazyVim](https://github.com/LazyVim/LazyVim) for editing // [Kitty](http
 
 I often switch between Linux (Debian) and MacOS for programming. This setup works well for both cases.
 
+Before installing neovim and the neovim config, make sure you satisfy the [requirements](https://www.lazyvim.org/#%EF%B8%8F-requirements).
+
 ```bash
 # to install on debian
 sudo apt-get install fd-find
@@ -14,9 +16,14 @@ sudo apt-get install neovim
 nvim -h
 
 # mac (i do not recommend homebrew)
+brew install fd
 curl -LO https://github.com/neovim/neovim/releases/download/v0.9.5/nvim-macos.tar.gz
 tar xzf nvim-macos.tar.gz
 ./nvim-macos/bin/nvim -h
+
+# recommend adding the nvim alias
+echo "alias nvim='/Users/jack/nvim-macos-arm64/bin/nvim'" >> .zshrc
+exec $SHELL
 ```
 
 ## nvim config installation
