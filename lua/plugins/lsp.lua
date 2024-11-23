@@ -23,6 +23,13 @@ return {
           },
         },
       },
+      elixirls = {
+        settings = {
+          elixirLS = {
+            dialyzerEnabled = true,
+          },
+        },
+      },
       rust_analyzer = {
         settings = {
           ["rust-analyzer"] = {
@@ -47,13 +54,6 @@ return {
           },
         },
       },
-    },
-    setup = {
-      rust_analyzer = function(_, opts)
-        local rust_tools_opts = require("lazyvim.util").opts("rust-tools.nvim")
-        require("rust-tools").setup(vim.tbl_deep_extend("force", rust_tools_opts or {}, { server = opts }))
-        return true
-      end,
     },
   },
 }
