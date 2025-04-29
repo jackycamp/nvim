@@ -1,8 +1,6 @@
 return {
   "neovim/nvim-lspconfig",
-  ---@class PluginLspOpts
   opts = {
-    ---@type lspconfig.options
     servers = {
       -- pyright will be automatically installed with mason and loaded with lspconfig
       pyright = {
@@ -37,26 +35,33 @@ return {
 
       -- for rust
       rust_analyzer = {
+        inlayHints = {
+          enable = false,
+        },
         settings = {
+          inlayHints = {
+            enable = false,
+          },
           ["rust-analyzer"] = {
             rustfmt = {
               extraArgs = { "--max-width", "140", "--chain-width", "100" },
             },
-            hints = {
-              enable = false,
-            },
-            inlayHints = {
-              --allFeatures = false,
-              parameterHints = {
-                enable = false,
-              },
-              chainingHints = {
-                enable = false,
-              },
-              typeHints = {
-                enable = false,
-              },
-            },
+            -- hints = {
+            --   enable = false,
+            -- },
+            -- inlayHints = {
+            --   enable = false,
+            --   allFeatures = false,
+            --   parameterHints = {
+            --     enable = false,
+            --   },
+            --   chainingHints = {
+            --     enable = false,
+            --   },
+            --   typeHints = {
+            --     enable = false,
+            --   },
+            -- },
           },
         },
       },
@@ -84,6 +89,12 @@ return {
       },
 
       -- others here
+    },
+    setup = {
+      rust_analyzer = function(_, opts)
+        vim.lsp.inlay_hint.enable(false)
+        return true
+      end,
     },
   },
 }

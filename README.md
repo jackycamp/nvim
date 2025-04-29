@@ -15,14 +15,26 @@ sudo apt-get install fd-find
 sudo apt-get install neovim
 nvim -h
 
-# mac (i do not recommend homebrew)
+# to install on mac
+# (system dependencies first)
+brew install font-hack-nerd-font
+brew install fzf
+brew install ripgrep
 brew install fd
-curl -LO https://github.com/neovim/neovim/releases/download/v0.9.5/nvim-macos.tar.gz
-tar xzf nvim-macos.tar.gz
-./nvim-macos/bin/nvim -h
+
+# Then install neovim
+curl -LO https://github.com/neovim/neovim/releases/download/v0.10.0/nvim-macos-arm64.tar.gz
+curl -LO https://github.com/neovim/neovim/releases/download/v0.10.0/nvim-macos-arm64.tar.gz.sha256sum
+shasum -a 256 -c nvim-macos-arm64.tar.gz.sha256sum
+xattr -c nvim-macos-arm64.tar.gz
+
+# you can also navigate to https://github.com/neovim/neovim/releases and browse
+# releases. I've been on v0.10.0 for a bit.
+tar xzf nvim-macos-arm64.tar.gz
+./nvim-macos-arm64/bin/nvim -h
 
 # recommend adding the nvim alias
-echo "alias nvim='/Users/jack/nvim-macos-arm64/bin/nvim'" >> .zshrc
+echo "alias nvim='/Users/jack/nvim-macos-arm64/bin/nvim'" >> .zprofile
 exec $SHELL
 ```
 
