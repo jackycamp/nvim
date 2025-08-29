@@ -9,3 +9,10 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.bo.commentstring = "// %s" -- Single-line comments
   end,
 })
+
+-- Arbitrary user commands, loaded alongside autocmds for convenience
+
+-- Show notification history
+vim.api.nvim_create_user_command("Notifs", function()
+  Snacks.notifier.show_history()
+end, { desc = "Show notification history" })
