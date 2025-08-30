@@ -64,7 +64,6 @@ exec $SHELL
 ```bash
 # as easy as:
 git clone https://github.com/jackycamp/nvim.git ~/.config/nvim
-
 ```
 
 ## kitty config installation
@@ -81,7 +80,7 @@ cp ~/.config/nvim/kitty.conf ~/.config/kitty/
 cp ~/.config/nvim/choso-bg.png ~/choso-bg.png
 ```
 
-Then launch neovim (in accordance with your host) and the config should load automatically!
+Now just launch neovim and the config will load automatically!
 
 ## Commands
 
