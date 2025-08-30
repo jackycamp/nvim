@@ -14,8 +14,6 @@ I often switch between Linux (Debian) and MacOS for programming. This setup work
 | Ubuntu 22.04           | 0.11.3 | 14      | ✅         |
 | MacOS 15.4.1 (Sequoia) | 0.11.3 | 14      | ✅         |
 
-Tested on Debian 12 (Bookworm), Ubuntu 22.04, and MacOS.
-
 ## Install
 
 The requirements are documented on `LazyVim`'s [home page](https://www.lazyvim.org/#%EF%B8%8F-requirements).
@@ -24,6 +22,7 @@ But these instructions will walk you through the complete setup.
 ```bash
 # Debian install prereqs
 sudo apt-get install fd-find
+sudo apt-get install ripgrep
 
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
