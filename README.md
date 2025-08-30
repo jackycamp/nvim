@@ -84,7 +84,13 @@ Now just launch neovim and the config will load automatically!
 
 ## Commands
 
+`:Notifs`
+
 Run `:Notifs` to display all notifications and error messages that might appear when you first launch lazyvim.
+
+`:LazyVimVersion`
+
+Run `:LazyVimVersion` to display the loaded LazyVim version.
 
 ## Troubleshooting
 
