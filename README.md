@@ -6,6 +6,18 @@ Neovim [LazyVim](https://github.com/LazyVim/LazyVim) for editing // [Kitty](http
 
 I often switch between Linux (Debian) and MacOS for programming. This setup works well for both cases.
 
+## Compatibility
+
+| OS                   | Neovim | LazyVim |
+| -------------------- | ------ | ------- |
+| Debian 12 (bookworm) | 0.11.3 | 14      |
+| Ubuntu 22.04         | 0.11.3 | 14      |
+| Ubuntu 22.04         | 0.11.3 | 14      |
+
+Tested on Debian 12 (Bookworm), Ubuntu 22.04, and MacOS.
+
+## Install
+
 Before installing neovim and the neovim config, make sure you satisfy the [requirements](https://www.lazyvim.org/#%EF%B8%8F-requirements).
 
 ```bash
@@ -70,6 +82,10 @@ cp ~/.config/nvim/choso-bg.png ~/choso-bg.png
 ```
 
 Then launch neovim (in accordance with your host) and the config should load automatically!
+
+## Commands
+
+Run `:Notifs` to display all notifications and error messages that might appear when you first launch lazyvim.
 
 ## Troubleshooting
 
