@@ -6,14 +6,35 @@ Neovim [LazyVim](https://github.com/LazyVim/LazyVim) for editing // [Kitty](http
 
 I often switch between Linux (Debian) and MacOS for programming. This setup works well for both cases.
 
+## Compatibility
+
+| OS                   | Neovim | LazyVim |
+| -------------------- | ------ | ------- |
+| Debian 12 (bookworm) | 0.11.3 | 14      |
+| Ubuntu 22.04         | 0.11.3 | 14      |
+| Ubuntu 22.04         | 0.11.3 | 14      |
+
+Tested on Debian 12 (Bookworm), Ubuntu 22.04, and MacOS.
+
+## Install
+
 Before installing neovim and the neovim config, make sure you satisfy the [requirements](https://www.lazyvim.org/#%EF%B8%8F-requirements).
 
 ```bash
-# to install on debian
+# Debian install prereqs
 sudo apt-get install fd-find
 
-sudo apt-get install neovim
-nvim -h
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+
+# neovim install, prefer tarball over package manager
+# so you can easily choose the package you want or upgrade
+# in the future
+cd /opt
+sudo wget https://github.com/neovim/neovim/releases/download/v0.11.3/nvim-linux-x86_64.tar.gz
+sudo tar -xzf nvim-linux-x86_64.tar.gz
+sudo ln -sf /opt/nvim-linux-x86_64/bin/nvim ~/.local/bin/nvim
+nvim --version
 
 # to install on mac
 # (system dependencies first)
@@ -43,7 +64,6 @@ exec $SHELL
 ```bash
 # as easy as:
 git clone https://github.com/jackycamp/nvim.git ~/.config/nvim
-
 ```
 
 ## kitty config installation
@@ -60,4 +80,24 @@ cp ~/.config/nvim/kitty.conf ~/.config/kitty/
 cp ~/.config/nvim/choso-bg.png ~/choso-bg.png
 ```
 
-Then launch neovim (in accordance with your host) and the config should load automatically!
+Now just launch neovim and the config will load automatically!
+
+## Commands
+
+`:Notifs`
+
+Run `:Notifs` to display all notifications and error messages that might appear when you first launch lazyvim.
+
+`:LazyVimVersion`
+
+Run `:LazyVimVersion` to display the loaded LazyVim version.
+
+## Troubleshooting
+
+**Why is fzf being used when I try to find or grep files?**
+
+You may need to manually enable telescope. Do :LazyExtras, find editor.telescope in the list of plugins, type "x" next to it to enable it.
+
+## Resources
+
+[Neovim release page](https://github.com/neovim/neovim/releases)

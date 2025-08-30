@@ -9,3 +9,15 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.bo.commentstring = "// %s" -- Single-line comments
   end,
 })
+
+-- Arbitrary user commands, loaded alongside autocmds for convenience
+
+-- Show notification history
+vim.api.nvim_create_user_command("Notifs", function()
+  Snacks.notifier.show_history()
+end, { desc = "Show notification history" })
+
+-- Show LazyVim version
+vim.api.nvim_create_user_command("LazyVimVersion", function()
+  print(require("lazyvim.config").version)
+end, { desc = "Show LazyVim version" })

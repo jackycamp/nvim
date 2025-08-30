@@ -4,3 +4,5 @@
 
 local opt = vim.opt
 opt.mouse = "" -- disable mouse mode
+
+vim.g.snacks_animate = false

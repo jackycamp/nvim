@@ -42,5 +42,32 @@ return {
         },
       },
     },
+    specs = {
+      {
+        "akinsho/bufferline.nvim",
+        optional = true,
+        opts = function(_, opts)
+          if (vim.g.colors_name or ""):find("catppuccin") then
+            opts.highlights = require("catppuccin.groups.integrations.bufferline").get()
+          end
+        end,
+      },
+    },
+  },
+
+  -- new lazyvim versions are using broken neovim api's
+  -- for newer neovim versions. See this issue:
+  -- https://github.com/LazyVim/LazyVim/issues/6355#issuecomment-3212986215
+  -- Below is a little patch to that bufferline works with catpuccin
+  -- until lazyvim fixes are merged.
+  {
+    "catppuccin/nvim",
+    opts = function(_, opts)
+      local module = require("catppuccin.groups.integrations.bufferline")
+      if module then
+        module.get = module.get_theme
+      end
+      return opts
+    end,
   },
 }

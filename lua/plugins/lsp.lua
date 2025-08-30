@@ -68,25 +68,25 @@ return {
 
       -- swift
       -- helpful reference: https://wojciechkulik.pl/ios/the-complete-guide-to-ios-macos-development-in-neovim
-      sourcekit = {
-        capabilities = vim.tbl_deep_extend("force", require("cmp_nvim_lsp").default_capabilities(), {
-          textDocument = {
-            inlayHint = {
-              -- disable inlay hints (throws errors anyway)
-              dynamicRegistration = false,
-            },
-          },
-        }),
-        on_attach = function(_, bufnr)
-          local opts = { noremap = true, silent = true, buffer = bufnr }
-
-          opts.desc = "Show line diagnostics"
-          vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, opts)
-
-          opts.desc = "Show documentation for what is under cursor"
-          vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
-        end,
-      },
+      -- sourcekit = {
+      --   capabilities = vim.tbl_deep_extend("force", require("cmp_nvim_lsp").default_capabilities(), {
+      --     textDocument = {
+      --       inlayHint = {
+      --         -- disable inlay hints (throws errors anyway)
+      --         dynamicRegistration = false,
+      --       },
+      --     },
+      --   }),
+      --   on_attach = function(_, bufnr)
+      --     local opts = { noremap = true, silent = true, buffer = bufnr }
+      --
+      --     opts.desc = "Show line diagnostics"
+      --     vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, opts)
+      --
+      --     opts.desc = "Show documentation for what is under cursor"
+      --     vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
+      --   end,
+      -- },
 
       -- others here
     },
