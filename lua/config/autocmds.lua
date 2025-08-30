@@ -16,3 +16,8 @@ vim.api.nvim_create_autocmd("FileType", {
 vim.api.nvim_create_user_command("Notifs", function()
   Snacks.notifier.show_history()
 end, { desc = "Show notification history" })
+
+-- Show LazyVim version
+vim.api.nvim_create_user_command("LazyVimVersion", function()
+  print(require("lazyvim.config").version)
+end, { desc = "Show LazyVim version" })
