@@ -8,17 +8,18 @@ I often switch between Linux (Debian) and MacOS for programming. This setup work
 
 ## Compatibility
 
-| OS                   | Neovim | LazyVim |
-| -------------------- | ------ | ------- |
-| Debian 12 (bookworm) | 0.11.3 | 14      |
-| Ubuntu 22.04         | 0.11.3 | 14      |
-| Ubuntu 22.04         | 0.11.3 | 14      |
+| OS                     | Neovim | LazyVim | Compatible |
+| ---------------------- | ------ | ------- | ---------- |
+| Debian 12 (bookworm)   | 0.11.3 | 14      | ✅         |
+| Ubuntu 22.04           | 0.11.3 | 14      | ✅         |
+| MacOS 15.4.1 (Sequoia) | 0.11.3 | 14      | ✅         |
 
 Tested on Debian 12 (Bookworm), Ubuntu 22.04, and MacOS.
 
 ## Install
 
-Before installing neovim and the neovim config, make sure you satisfy the [requirements](https://www.lazyvim.org/#%EF%B8%8F-requirements).
+The requirements are documented on `LazyVim`'s [home page](https://www.lazyvim.org/#%EF%B8%8F-requirements).
+But these instructions will walk you through the complete setup.
 
 ```bash
 # Debian install prereqs
