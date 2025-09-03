@@ -44,19 +44,12 @@ brew install ripgrep
 brew install fd
 
 # Then install neovim
-curl -LO https://github.com/neovim/neovim/releases/download/v0.10.0/nvim-macos-arm64.tar.gz
-curl -LO https://github.com/neovim/neovim/releases/download/v0.10.0/nvim-macos-arm64.tar.gz.sha256sum
-shasum -a 256 -c nvim-macos-arm64.tar.gz.sha256sum
-xattr -c nvim-macos-arm64.tar.gz
-
-# you can also navigate to https://github.com/neovim/neovim/releases and browse
-# releases. I've been on v0.10.0 for a bit.
-tar xzf nvim-macos-arm64.tar.gz
-./nvim-macos-arm64/bin/nvim -h
-
-# recommend adding the nvim alias
-echo "alias nvim='/Users/jack/nvim-macos-arm64/bin/nvim'" >> .zprofile
-exec $SHELL
+cd /opt
+sudo curl -LO https://github.com/neovim/neovim/releases/download/v0.11.3/nvim-macos-arm64.tar.gz
+sudo xattr -c ./nvim-macos-arm64.tar.gz
+sudo tar xzvf nvim-macos-arm64.tar.gz
+sudo ln -sf /opt/nvim-macos-arm64.tar.gz/bin/nvim /usr/local/bin/nvim
+nvim --version
 ```
 
 ## nvim config installation
